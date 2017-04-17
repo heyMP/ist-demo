@@ -1,4 +1,5 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-date-picker/paper-date-picker.html">
 
 <dom-module id="ist-app">
   <template>
@@ -7,21 +8,26 @@
         display: block;
       }
     </style>
-    <h2>Hello [[prop1]]</h2>
+    <h1>Pick a date</h1>
+    <div>
+      {{date}}
+    </div>
+    <paper-date-picker id="picker" date="{{date}}"></paper-date-picker>
   </template>
 
   <script>
     Polymer({
 
       is: 'ist-app',
-
       properties: {
-        prop1: {
+        date: {
           type: String,
-          value: 'ist-app',
         },
       },
-
+      ready: function(e) {
+        var datePicker = this.$$('paper-date-picker');
+        this.date = datePicker.dateFormat(Date.now());
+      }
     });
   </script>
 </dom-module>
