@@ -1,4 +1,5 @@
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-button/paper-button.html">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 
 <!--
@@ -31,7 +32,7 @@
       }
     </style>
     <div class="buttons">
-        <a href="#" id="play-button">Play</a>
+        <paper-button id="play-button" raised>Play</paper-button>
     </div>
     <h1>Hydrolysis</h1>
     <svg id="circles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 128">
@@ -161,6 +162,7 @@
         playButton.addEventListener('click', function(e) {
           e.preventDefault();
           tl.play();
+          root$.fire('action', 'played');
         });
       }
 

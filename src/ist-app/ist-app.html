@@ -1,5 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/paper-date-picker/paper-date-picker.html">
+<link rel="import" href="../../bower_components/hydrolysis-element/hydrolysis-element.html">
 
 <dom-module id="ist-app">
   <template>
@@ -7,12 +8,17 @@
       :host {
         display: block;
       }
+      hydrolysis-element {
+        max-width: 800px;
+        margin: auto;
+      }
     </style>
     <h1>Pick a date</h1>
     <div>
       {{date}}
     </div>
     <paper-date-picker id="picker" date="{{date}}"></paper-date-picker>
+    <hydrolysis-element></hydrolysis-element>
   </template>
 
   <script>
@@ -27,6 +33,10 @@
       ready: function(e) {
         var datePicker = this.$$('paper-date-picker');
         this.date = datePicker.dateFormat(Date.now());
+
+        var hydroEl = document.addEventListener('action', function(e) {
+          console.log(e.detail);
+        });
       }
     });
   </script>
