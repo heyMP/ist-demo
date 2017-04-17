@@ -1,6 +1,11 @@
 # \<ist\>
 
+## IST App
+
 [/src/ist-app/ist-app.html](https://github.com/heyMP/ist-demo/blob/master/src/ist-app/ist-app.html)
+
+
+# Try it yourself!
 
 ## Install the Polymer-CLI
 
