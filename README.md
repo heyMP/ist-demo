@@ -1,8 +1,6 @@
 # \<ist\>
 
-```
-[src/ist-app/ist-app.html](https://github.com/heyMP/ist-demo/blob/master/src/ist-app/ist-app.html)
-```
+[/src/ist-app/ist-app.html](https://github.com/heyMP/ist-demo/blob/master/src/ist-app/ist-app.html)
 
 ## Install the Polymer-CLI
 
